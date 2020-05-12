@@ -4,12 +4,24 @@ echo "wellcome to curl generator"
 
 read -p 'Enter your url (without transfer protocol): ' url
 
-protocols=("http" "https")
+protocol_options=("http" "https")
 
-select protocol in "${protocols[@]}"; do
-  case $protocol in
+select selected_protocol in "${protocol_options[@]}"; do
+  case $selected_protocol in
     "http" | "https")
-      protocol="$protocol://"
+      protocol="$selected_protocol://"
+      break
+      ;;
+    *) echo "invalid option $REPLY";;
+  esac
+done
+
+method_options=("GET" "POST" "PUT" "DELETE")
+
+select selected_method in "${method_options[@]}"; do
+  case $selected_method in
+    "GET" | "POST" | "PUT" | "DELETE")
+      http_method="-X '$selected_method'"
       break
       ;;
     *) echo "invalid option $REPLY";;
@@ -48,4 +60,4 @@ for n in $(seq 1 $n_headers); do
   done
 done
 
-echo "curl $headers '$protocol$url' | jq"
+echo "curl $http_method $headers '$protocol$url' | jq"
