@@ -30,23 +30,23 @@ first option - type your url without protocol
 example: localhost:3000
 ```
 
-```
 secound option - select your protocol
+```
 example: 1
 ```
 
-```
 third option - select your http method
+```
 example: 1
 ```
 
-```
 fourth option - put the number of headers you will need
+```
 example: 3
 ```
 
-```
 fifth option - select your headers or create your own
+```
 example: 3
 example: 4
 ```
