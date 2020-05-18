@@ -52,7 +52,7 @@ for n in $(seq 1 $n_headers); do
         ;;
       "Custom Header")
         read -p 'Enter the header and value (Custom: Header) ' header_value
-        headers+=" -H '$selected_header'"
+        headers+=" -H '$header_value'"
         break
         ;;
       *) echo "invalid option $REPLY";;
