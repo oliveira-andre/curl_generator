@@ -56,3 +56,12 @@ example of custom header: Authorization: Token
 ```
 
 the output will be your perfect curl code
+
+### deb package
+
+you can download it using this [link](https://mega.nz/file/C2pTiJLA#tCVdv41DC9lB6vdENWtGxEH2ZSeIDpcDEv_Fwovp5xU)
+
+to install you just need to type
+```
+sudo dpkg -i curl-generator.0.1.deb
+```
